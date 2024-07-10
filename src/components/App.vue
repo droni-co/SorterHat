@@ -30,10 +30,14 @@
       </div>
       <div class="w-3/4 bg-slate-100 ">
         Resultados
+        <PostCard />
       </div>
     </main>
     <footer class="bg-slate-900 text-slate-100 text-sm p-2">
-      2024 Construido con trabajo duro y mucho café por el equipo de Droni.co.
+      2024 Built with hard work and many cofee by <a target="_blank">Droni.co</a> team.
     </footer>
   </div>
 </template>
+<script setup lang="ts">
+import PostCard from './PostCard.vue'
+</script>
