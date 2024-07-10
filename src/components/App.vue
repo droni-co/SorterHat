@@ -1,25 +1,39 @@
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      vue
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      coso
-    </a>
+  <div class="h-screen bg-slate-300 flex flex-col">
+    <header class="bg-[url('/src/assets/galaxy01.webp')]">
+      <img src="/src/assets/brand-w.svg" alt="SorterHat" class="w-1/3 mx-auto py-6" />
+    </header>
+    <main class="grow flex">
+      <div class="w-1/4 bg-slate-50 text-slate-700 p-2">
+        <p class="text-sm text-balance">
+          Select a folder to organize and rename files.
+        </p>
+        <label
+          for="selectFolder"
+          class="group
+            block
+            bg-pink-600
+            text-slate-100
+            transition
+            hover:bg-pink-50
+            hover:text-pink-600
+            border
+            border-pink-600
+            p-2
+            rounded
+            cursor-pointer
+            text-center">
+          <svg class="w-5 inline fill-white group-hover:fill-pink-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22,4A2,2 0 0,1 24,6V16A2,2 0 0,1 22,18H6A2,2 0 0,1 4,16V4A2,2 0 0,1 6,2H12L14,4H22M2,6V20H20V22H2A2,2 0 0,1 0,20V11H0V6H2M6,6V16H22V6H6Z" /></svg>
+          Select Folder
+          <input id="selectFolder" type="file" webkitdirectory multiple="false" class="hidden">
+        </label>
+      </div>
+      <div class="w-3/4 bg-slate-100 ">
+        Resultados
+      </div>
+    </main>
+    <footer class="bg-slate-900 text-slate-100 text-sm p-2">
+      2024 Construido con trabajo duro y mucho café por el equipo de Droni.co.
+    </footer>
   </div>
 </template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
