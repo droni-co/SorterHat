@@ -72,6 +72,7 @@ interface FileEEFF {
   month: string;
   year: string;
   ext: string;
+  copied: boolean;
 }
 
 const getPosts = async () => {
