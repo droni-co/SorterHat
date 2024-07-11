@@ -15,3 +15,5 @@ MIT
 ## Author
 Gustavo Barragán <dev@droni.co>
 [Droni.co](https://droni.co)
+
+![image](https://github.com/droni-co/SorterHat/assets/75599868/d70f347e-a2fd-4bda-9467-7a7bad6435ff)
