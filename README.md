@@ -8,3 +8,9 @@ Is a simple and minimal app designed to copy and rename file from a folder to ou
 - Only affects to xlsx and pdf files
 - Create an `./output` folder with copied files
 - Gives feedback about files copied and no copied
+
+## License
+MIT
+
+## Author
+Gustavo Barragán <dev@droni.co>
