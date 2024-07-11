@@ -1,6 +1,9 @@
-import { app, BrowserWindow, ipcMain, shell } from 'electron';
+import { app, BrowserWindow, ipcMain, nativeImage, shell, Tray } from 'electron';
 import path from 'path';
 import Renamer from './renamer';
+
+
+
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
@@ -9,6 +12,8 @@ if (require('electron-squirrel-startup')) {
 
 const createWindow = () => {
   // Create the browser window.
+  
+
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
@@ -17,6 +22,7 @@ const createWindow = () => {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
     },
+    icon: './images/icon.ico'
   });
 
   ipcMain.on('open-link', async (event, url:string) => {
