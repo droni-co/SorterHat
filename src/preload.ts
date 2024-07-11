@@ -4,5 +4,6 @@
 const { contextBridge, ipcRenderer } = require('electron/renderer')
 
 contextBridge.exposeInMainWorld('electronAPI', {
-  openLink: async (url:string) => ipcRenderer.send('open-link', url)
+  openLink: async (url:string) => ipcRenderer.send('open-link', url),
+  renameFiles: async (folder:string) => ipcRenderer.invoke('rename-files', folder)
 })
