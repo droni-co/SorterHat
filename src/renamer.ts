@@ -39,10 +39,6 @@ export default {
       results.push(record)
       /* Copy file to output directory */
       if (!fs.existsSync(`${outputDir}/${record.year}-${record.month}`)) fs.mkdirSync(`${outputDir}/${record.year}-${record.month}`, { recursive: true })
-      console.log('copied from')
-      console.log(`${folder}/${record.path}`)
-      console.log('to code')
-      console.log(`${record.code}`)
       try {
         fs.copyFileSync(`${folder}/${record.path}`, `${outputDir}/${record.year}-${record.month}/${record.code}.${record.ext}`)
         record.copied = true

@@ -10,18 +10,18 @@
     </thead>
     <tbody>
       <tr v-for="result in results" :key="result.code"
-        :class="{ 'bg-green-100': result.copied, 'bg-red-100': !result.copied }">
-        <td class="border px-2 py-2">
+        :class="{ 'bg-green-100 dark:bg-green-800': result.copied, 'bg-rose-100 dark:bg-rose-800': !result.copied }">
+        <td class="border dark:border-slate-900 px-2 py-2">
           {{ result.code }}
         </td>
-        <td class="border px-2 py-2">
+        <td class="border dark:border-slate-900 px-2 py-2">
           {{ result.filename }}<br>
           <small>{{ result.path }}</small>
         </td>
-        <td class="border px-2 py-2">
+        <td class="border dark:border-slate-900 px-2 py-2">
           {{ result.year }}-{{ result.month }}
         </td>
-        <td class="border px-2 py-2">{{ result.ext }}</td>
+        <td class="border dark:border-slate-900 px-2 py-2">{{ result.ext }}</td>
       </tr>
     </tbody>
   </table>

@@ -20,7 +20,6 @@ const createWindow = () => {
   });
 
   ipcMain.on('open-link', async (event, url:string) => {
-    console.log(url);
     shell.openExternal(url)
   })
 

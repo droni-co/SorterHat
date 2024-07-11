@@ -3,7 +3,7 @@
     <header class="bg-[url('/src/assets/galaxy01.webp')]">
       <img src="/src/assets/brand-w.svg" alt="SorterHat" class="w-1/3 mx-auto py-6 cursor-pointer" @click="electronApi.openLink('https://droni.co')" />
     </header>
-    <main class="bg-slate-50">
+    <main class="bg-slate-50 dark:bg-slate-900 dark:text-white">
       <form>
         <div v-if="results.length > 0" class="text-center">
           <p class="text-sm text-balance py-2">
@@ -86,12 +86,14 @@ const getPosts = async () => {
   });
 }
 
+
 const selectFolder = (event: any) => {
   results.value = [];
   loading.value = true;
-  const arrayPath = event.target.files[0].path.split('/');
-    arrayPath.pop();
-    const path = arrayPath.join('/');
+  const separator = navigator.appVersion.toLowerCase().includes('win') ? '\\' : '/';
+  const arrayPath = event.target.files[0].path.split(separator);
+  arrayPath.pop();
+  const path = arrayPath.join(separator);
   electronApi.renameFiles(path).then((res: any) => {
     results.value = res;
   }).finally(() => {
